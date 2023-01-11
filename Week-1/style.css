@@ -1,0 +1,163 @@
+
+/* Wrapper */
+.wrapper {
+    width: 100%;
+    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Noto Serif', serif;
+}
+
+/* Top Menu Bar */
+.navigator {
+    padding: 0.2em 0;
+    background-color: #DCDCDC;
+}
+
+
+.navigator ul {
+    list-style: none;
+}
+
+.mobile_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+    margin: 0 2em;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 2em 0 0;
+}
+
+
+#item1 {
+    margin-left: auto;
+}
+
+/* Main Content */
+.welcome_banner {
+    background-color: #c6d8f0;
+    padding:4em 0;
+    text-align: center;
+}
+
+.welcome_banner h1 {
+    font-size: 300%;
+    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Noto Serif', serif;;
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+
+}
+
+main h2 {
+    text-align: center;
+    margin: 1.5em 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Noto Serif', serif;
+    font-size: 200%;
+}
+
+/* Content Boxes */
+main ul{
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main ul li{
+    width: 49%;
+    list-style: none;
+    text-align: center;
+    padding: 1em 0 10em 0;
+    margin: 0.6em auto;
+    background-color: #778899;
+    font-weight: normal;
+
+}
+
+/* Button */
+.btn {
+    width:150px;
+    text-align: center;
+    padding: 1em 0.2em;
+    margin: 0 auto 2em;
+    background-color:#c6d8f0;
+}
+
+
+/* Icon */
+#menu_icon {
+    margin: 0.5em 4em 0 0;
+    display: none;
+}
+
+
+
+/* Media Query */
+
+ @media screen and (min-width: 500px) and (max-width: 800px){
+    .menu {
+        display: none;
+    }
+
+    #menu_icon {
+        display: flex;
+        margin-top: 0.5em;
+    }
+
+    .welcome_banner h1 {
+        font-size: 200%;
+    }
+
+    main h2 {
+        font-size: 133%;
+    }
+
+    /* .navigator {
+        padding: 0.01em 0;
+    }
+
+    .welcome_banner {
+        padding: 3em 0;
+    } */
+
+    main ul li {
+        width: 45%;
+    }
+
+
+}
+
+@media screen and (max-width: 499px){
+    .menu {
+        display: none;
+    }
+
+    #menu_icon {
+        display: flex;
+        margin-top: 0.5em;
+    }
+
+    
+    main ul li {
+        width: 90%;
+    }
+
+    .welcome_banner h1 {
+        font-size: 200%;
+    }
+
+    main h2 {
+        font-size: 133%;
+    }
+}
+
