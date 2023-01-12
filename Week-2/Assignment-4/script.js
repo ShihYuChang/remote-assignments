@@ -29,3 +29,19 @@ exitIcon.addEventListener('click', () => {
     Menu.style.display = 'none';
     exitIcon.style = 'none';
 });
+
+
+// Click 'Call to Action' button to show the four hidden boxes
+const button = document.querySelector('.btn');
+const hiddenBoxes = document.querySelector('.hiddenMenu');
+
+button.addEventListener('click', () => {
+    if ( hiddenBoxes.style.display === 'none') {
+        hiddenBoxes.style.display = 'flex';
+    }
+
+    else {
+        hiddenBoxes.style.display = 'none';
+    }
+
+});
