@@ -1,13 +1,14 @@
 // Change the text in the banner
+const Banner = document.querySelector('.welcome_banner');
 const BannerText = document.querySelector('.welcome_banner h1');
 
-BannerText.addEventListener('click',() => {
-    if (BannerText.textContent === 'Welcome Message') {
-        BannerText.textContent = 'Have a Good Time!';
+Banner.addEventListener('click',() => {
+    if ( BannerText.textContent === 'Have a Good Time!') {
+        BannerText.textContent = 'Welcome Message!';
     }
 
     else {
-        BannerText.textContent = 'Welcome Message';
+        BannerText.textContent = 'Have a Good Time!';
     }
     
 });
@@ -36,12 +37,12 @@ const button = document.querySelector('.btn');
 const hiddenBoxes = document.querySelector('.hiddenMenu');
 
 button.addEventListener('click', () => {
-    if ( hiddenBoxes.style.display === 'none') {
-        hiddenBoxes.style.display = 'flex';
+    if ( hiddenBoxes.style.display === 'flex') {
+        hiddenBoxes.style.display = 'none';
     }
 
     else {
-        hiddenBoxes.style.display = 'none';
+        hiddenBoxes.style.display = 'flex';
     }
 
 });
