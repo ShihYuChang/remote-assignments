@@ -69,15 +69,22 @@ main h2 {
 }
 
 /* Content Boxes */
-.topMenu{
+.topMenu {
+    display: flex;
+}
+
+.hiddenMenu {
+    display: none;
+}
+
+.topMenu, .hiddenMenu{
     padding: 0;
     box-sizing: border-box;
-    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.topMenu li{
+.topMenu li, .hiddenMenu li{
     width: 49%;
     list-style: none;
     text-align: center;
@@ -160,7 +167,7 @@ main h2 {
         font-size: 133%;
     }
 
-    .topMenu li {
+    .topMenu li, .hiddenMenu li {
         width: 43%;
     }
 
@@ -206,7 +213,7 @@ main h2 {
     }
 
     
-    .topMenu li {
+    .topMenu li, .hiddenMenu li {
         width: 90%;
     }
 
