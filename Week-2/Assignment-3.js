@@ -6,7 +6,7 @@ var totalPrice = 0;
 function calculate(data) {
     for ( let i = 0; i < data.products.length; i++ ) {
         var productPrice = data.products[i].price;
-        var productDiscount = data.discount;
+        var productDiscount = 1 - data.discount;
         var finalPrice = productPrice * productDiscount;
         totalPrice += finalPrice;                
     }
