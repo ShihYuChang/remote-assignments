@@ -126,7 +126,7 @@ main h2 {
 
 /* Media Query */
 
- @media screen and (min-width: 500px) and (max-width: 800px){
+ @media screen and (min-width: 500px) and (max-width: 799px){
        /* Right Side Menu */
     .menu {
     display: none;
