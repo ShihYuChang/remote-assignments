@@ -34,7 +34,7 @@ exitIcon.addEventListener('click', () => {
 
 // Click 'Call to Action' button to show the four hidden boxes
 const button = document.querySelector('.btn');
-const hiddenBoxes = document.querySelector('.hiddenMenu');
+const hiddenBoxes = document.querySelector('.hiddenBox');
 
 button.addEventListener('click', () => {
     if ( hiddenBoxes.style.display === 'flex') {
