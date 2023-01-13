@@ -16,10 +16,10 @@ Banner.addEventListener('click',() => {
 // Click menu icon to extend the right bar menu
 const menuIcon = document.getElementById('menu_icon');
 const exitIcon = document.getElementById('exitIcon');
-const Menu = document.querySelector('.menu');
+var rightMenu = document.querySelector('.hiddenRightMenu');
 
 menuIcon.addEventListener('click', () => {
-    Menu.style.display = 'block';
+    rightMenu.style.display = 'block';
     exitIcon.style.display = 'block';
 });
 
@@ -27,7 +27,7 @@ menuIcon.addEventListener('click', () => {
 
 
 exitIcon.addEventListener('click', () => {
-    Menu.style.display = 'none';
+    rightMenu.style.display = 'none';
     exitIcon.style = 'none';
 });
 

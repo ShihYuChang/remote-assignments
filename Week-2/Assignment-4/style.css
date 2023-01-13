@@ -40,6 +40,10 @@
     margin-left: auto;
 }
 
+.hiddenRightMenu {
+    display: none;
+}
+
 /* Main Content */
 .welcome_banner {
     background-color: #c6d8f0;
@@ -121,23 +125,27 @@ main h2 {
 
  @media screen and (min-width: 500px) and (max-width: 800px){
        /* Right Side Menu */
-       .menu {
-        display: none;
-        background-color: white;
-        width: 50%;
-        height: 100%;
-        text-align: left;
-        position: fixed;
-        top: 0;
-        right: 0;
-        z-index: 5;
-        border: #778899 solid 1px;
-        box-shadow: 0 0 5px;
-        margin: 0;
-        padding: 0;
+    .menu {
+    display: none;
+    }
+       
+    .hiddenRightMenu {
+    display: none;
+    background-color: white;
+    width: 50%;
+    height: 100%;
+    text-align: left;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    border: #778899 solid 1px;
+    box-shadow: 0 0 5px;
+    margin: 0;
+    padding: 0; 
     }
 
-    .menu li {
+    .hiddenRightMenu li {
         margin: 1em 0 3em 1em;
         font-size: 1.2em;
     }
@@ -148,11 +156,6 @@ main h2 {
         margin: 0 1em;
     }
     
-    
-    
-    .menu {
-        display: none;
-    }
 
     #menu_icon {
         display: flex;
@@ -178,6 +181,10 @@ main h2 {
     /* Right Side Menu */
     .menu {
         display: none;
+    }
+    
+    .hiddenRightMenu {
+        display: none;
         background-color: white;
         width: 50%;
         height: 100%;
@@ -192,7 +199,7 @@ main h2 {
         padding: 0;
     }
 
-    .menu li {
+    .hiddenRightMenu li {
         margin: 1em 0 3em 1em;
         font-size: 1.2em;
     }
