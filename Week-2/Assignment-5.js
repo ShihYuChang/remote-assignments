@@ -1,5 +1,5 @@
 function twoSum(nums, target) {
-    var finalAns = [];
+    let finalAns = [];
     if ( nums.length < 2 ){
         console.log('陣列須包含兩個以上的數字') ;
     }
@@ -8,7 +8,7 @@ function twoSum(nums, target) {
         if ( nums.length >= 2 ) {
             for ( let i = 0; i < nums.length; i++) {
                 for ( let n = i + 1; n < nums.length; n++) {
-                    var numTotal = nums[i] + nums [n]
+                    let numTotal = nums[i] + nums [n]
                     if ( numTotal === target ) {
                         finalAns.push(nums[i], nums[n]);
                     }
