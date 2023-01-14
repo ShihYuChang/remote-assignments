@@ -16,7 +16,7 @@ Banner.addEventListener('click',() => {
 // Click menu icon to extend the right bar menu
 const menuIcon = document.getElementById('menu_icon');
 const exitIcon = document.getElementById('exitIcon');
-var rightMenu = document.querySelector('.hiddenRightMenu');
+const rightMenu = document.querySelector('.hiddenRightMenu');
 
 menuIcon.addEventListener('click', () => {
     rightMenu.style.display = 'block';
