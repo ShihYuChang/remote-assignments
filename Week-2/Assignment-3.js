@@ -1,12 +1,12 @@
 // Create a varible for the total discounted price for all products and set it to zero initailly.
-var totalPrice = 0;
+let totalPrice = 0;
 
 // Create the function 'calculate' to generate the totalPrice
 function calculate(data) {
   for (let i = 0; i < data.products.length; i++) {
-    var productPrice = data.products[i].price;
-    var productDiscount = 1 - data.discount;
-    var finalPrice = productPrice * productDiscount;
+    const productPrice = data.products[i].price;
+    const productDiscount = 1 - data.discount;
+    const finalPrice = productPrice * productDiscount;
     totalPrice += finalPrice;
   }
   return totalPrice;

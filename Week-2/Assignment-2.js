@@ -6,7 +6,7 @@ function calculate(numList) {
     result = numList.n1 - numList.n2;
     return result;
   } else {
-    let errorMsg = "Not supported";
+    const errorMsg = "Not supported";
     return errorMsg;
   }
 }

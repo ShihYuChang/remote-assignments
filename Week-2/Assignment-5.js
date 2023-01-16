@@ -1,5 +1,5 @@
 function twoSum(nums, target) {
-  let finalAns = [];
+  const finalAns = [];
   if (nums.length < 2) {
     console.log("陣列須包含兩個以上的數字");
   } else {
