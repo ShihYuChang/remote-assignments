@@ -1,6 +1,10 @@
-// Import Express
+// Import Express & other modules
 const express = require("express");
+const cookieParser = require("cookie-parser");
 const app = express();
+const bodyParser = require("body-parser");
+app.use(cookieParser());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(__dirname + "/Assignment-3"));
 
 // Set up PUG
@@ -24,6 +28,26 @@ app.get("/getData", (req, res) => {
     FinalTotal = `<h1>${((Num + 1) * Num) / 2}</h1>`;
   }
   res.send(`${FinalTotal}`);
+});
+
+// Check cookies
+
+app.get("/myName", (req, res) => {
+  if (req.query.name) {
+    if (req.cookies.username) {
+      res.send(`Done! Welcome aboard ${req.cookies.username}`);
+    } else {
+      res.send("No username detected in cookies! Please check your cookies");
+    }
+  } else {
+    res.render("myName");
+  }
+});
+
+app.post("/myName", (req, res) => {
+  let userName = req.body.username;
+  res.cookie("username", userName);
+  res.redirect("/myName" + `?name=${userName}`);
 });
 
 // Error Handler
