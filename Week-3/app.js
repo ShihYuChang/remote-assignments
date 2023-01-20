@@ -37,7 +37,7 @@ app.get("/myName", (req, res) => {
     if (req.cookies.username) {
       res.send(`Done! Welcome aboard ${req.cookies.username}`);
     } else {
-      res.send("No username detected in cookies! Please check your cookies");
+      res.redirect("/myName");
     }
   } else {
     res.render("myName");
