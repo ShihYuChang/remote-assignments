@@ -33,12 +33,8 @@ app.get("/getData", (req, res) => {
 // Check cookies
 
 app.get("/myName", (req, res) => {
-  if (req.query.name) {
-    if (req.cookies.username) {
-      res.send(`Done! Welcome aboard ${req.cookies.username}`);
-    } else {
-      res.redirect("/myName");
-    }
+  if (req.query.name || req.cookies.username) {
+    res.send(`Done! Welcome aboard ${req.cookies.username}`);
   } else {
     res.render("myName");
   }
