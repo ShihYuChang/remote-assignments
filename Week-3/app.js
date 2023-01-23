@@ -2,14 +2,10 @@
 const express = require("express");
 const cookieParser = require("cookie-parser");
 const app = express();
-<<<<<<< HEAD
-app.use(express.static("./Assignment-3"));
-=======
 const bodyParser = require("body-parser");
+app.use(express.static("./Assignment-3"));
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static(__dirname + "/Assignment-3"));
->>>>>>> a1b1f2ba04a977cb583bc2bfa64163eb952570ec
 
 // Set up PUG
 app.set("view engine", "pug");
