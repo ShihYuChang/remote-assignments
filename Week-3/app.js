@@ -1,7 +1,15 @@
-// Import Express
+// Import Express & other modules
 const express = require("express");
+const cookieParser = require("cookie-parser");
 const app = express();
+<<<<<<< HEAD
 app.use(express.static("./Assignment-3"));
+=======
+const bodyParser = require("body-parser");
+app.use(cookieParser());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(__dirname + "/Assignment-3"));
+>>>>>>> a1b1f2ba04a977cb583bc2bfa64163eb952570ec
 
 // Set up PUG
 app.set("view engine", "pug");
@@ -24,6 +32,22 @@ app.get("/getData", (req, res) => {
     FinalTotal = `<h1>${((Num + 1) * Num) / 2}</h1>`;
   }
   res.send(`${FinalTotal}`);
+});
+
+// Check cookies
+
+app.get("/myName", (req, res) => {
+  if (req.query.name || req.cookies.username) {
+    res.send(`Done! Welcome aboard ${req.cookies.username}`);
+  } else {
+    res.render("myName");
+  }
+});
+
+app.post("/myName", (req, res) => {
+  let userName = req.body.username;
+  res.cookie("username", userName);
+  res.redirect("/myName" + `?name=${userName}`);
 });
 
 // Error Handler

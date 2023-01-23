@@ -1,0 +1,12 @@
+extends layout.pug 
+
+block content
+    form(action='/myName' method='post')
+        label Please input your name 
+            br
+            br
+            input(type='text' name='username')
+            br
+            br
+        button(type='submit') Submit
+
