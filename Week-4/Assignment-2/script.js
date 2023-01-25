@@ -5,7 +5,7 @@ function ajax(url) {
 }
 
 function render(data) {
-  data.map((product) =>
+  data.forEach((product) =>
     productDivSelector.insertAdjacentHTML(
       "beforeend",
       `
