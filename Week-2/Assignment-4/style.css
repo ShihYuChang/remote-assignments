@@ -84,6 +84,13 @@ main h2 {
 }
 
 /* Button */
+button {
+  border: none;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
 .btn {
   width: 150px;
   text-align: center;
