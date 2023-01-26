@@ -6,21 +6,21 @@
 }
 
 /* Top Menu Bar */
-.navigator {
+header {
   padding: 0.2em 0;
   background-color: #dcdcdc;
 }
 
-.navigator ul {
+header ul {
   list-style: none;
 }
 
-.mobile_header {
+.navigator {
   display: flex;
   justify-content: space-between;
 }
 
-.mobile_header li {
+.navigator li {
   margin: auto 0;
 }
 
