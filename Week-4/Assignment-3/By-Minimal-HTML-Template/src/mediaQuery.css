@@ -1,4 +1,8 @@
 @media screen and (min-width: 800px) {
+  #title {
+    margin-right: auto;
+  }
+
   .menu {
     margin: 0 2em;
     display: flex;
@@ -7,6 +11,10 @@
   .menu li {
     margin: 0 2em 0 0;
   }
+}
+
+#menu_icon {
+  display: none;
 }
 
 @media screen and (min-width: 500px) and (max-width: 799px) {
@@ -100,7 +108,7 @@
 
   #menu_icon {
     display: flex;
-    margin-top: auto;
+    margin-top: 0.5em;
   }
 
   .box li,

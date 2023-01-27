@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
-import "./style.css";
-import "./normalize.css";
-import "./mediaQuery.css";
 
 // Main Layout
 const Header = () => {

@@ -2,7 +2,10 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Hello World</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Test</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <link href="https://css.gg/menu.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -10,14 +13,12 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-
-    <!-- Don't use this in production: -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script type="text/babel" src="../src/app.js"></script>
+    <link rel="stylesheet" href="../src/style.css" />
+    <link rel="stylesheet" href="../src/normalize.css" />
+    <link rel="stylesheet" href="../src/mediaQuery.css" />
   </head>
   <body>
     <div id="root"></div>
+    <script src="../dist/bundle.js"></script>
   </body>
 </html>
