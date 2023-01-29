@@ -61,9 +61,13 @@ const MenuVisibilty = (props) => {
 
 // Boxes
 const Banner = () => {
+  const [isDefaultMsg, setIsDefaultMsg] = useState(true);
+
   return (
     <div className="welcome_banner">
-      <h1>{welcomeMessage}</h1>
+      <h1 onClick={() => setIsDefaultMsg(!isDefaultMsg)}>
+        {isDefaultMsg ? defaultMessage : onClickMessage}
+      </h1>
     </div>
   );
 };
@@ -113,7 +117,8 @@ const BoxVisibility = (props) => {
 
 // Contents
 const naviTitle = "Website Title / Logo";
-const welcomeMessage = "Welcome Message";
+const defaultMessage = "Welcome Message!";
+const onClickMessage = "Have a Good Time!";
 const sectionTitle = "Section Title";
 
 // APP
