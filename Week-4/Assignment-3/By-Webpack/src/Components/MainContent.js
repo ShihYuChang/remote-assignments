@@ -4,19 +4,22 @@ const MainContent = () => {
   return (
     <main>
       <h2>{sectionTitle}</h2>
-      <ContentBox className="box" boxNumber={1} />
+      <ContentBox className="box" firstBoxNumber={1} lastBoxNumber={4} />
       <BoxVisibility className="btn" type="button" text="Call to Action" />
     </main>
   );
 };
 
 const ContentBox = (props) => {
+  let boxList = [];
+  for (let i = props.firstBoxNumber; i <= props.lastBoxNumber; i++) {
+    boxList.push({ num: i, id: i });
+  }
   return (
     <ul className={props.className} style={props.style}>
-      <li>Content Box {props.boxNumber}</li>
-      <li>Content Box {props.boxNumber + 1}</li>
-      <li>Content Box {props.boxNumber + 2}</li>
-      <li>Content Box {props.boxNumber + 3}</li>
+      {boxList.map((item) => (
+        <li key={item.id.toString()}>Content Box {item.num}</li>
+      ))}
     </ul>
   );
 };
@@ -35,7 +38,8 @@ const BoxVisibility = (props) => {
       </button>
       <ContentBox
         className={"hiddenBox"}
-        boxNumber={5}
+        firstBoxNumber={5}
+        lastBoxNumber={8}
         style={{ display: isVisible ? "flex" : "none" }}
       />
     </div>

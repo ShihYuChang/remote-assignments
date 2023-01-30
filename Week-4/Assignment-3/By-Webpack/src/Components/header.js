@@ -13,7 +13,7 @@ const Header = () => {
 };
 
 const TopMenu = () => {
-  return <MenuItems className="menu" />;
+  return <MenuItems className="menu" firstItemNum={1} lastItemNum={4} />;
 };
 
 const MenuVisibilty = (props) => {
@@ -43,12 +43,17 @@ const MenuVisibilty = (props) => {
 };
 
 const MenuItems = (props) => {
+  let itemList = [];
+
+  for (let i = props.firstItemNum; i <= props.lastItemNum; i++) {
+    itemList.push({ num: i, id: i });
+  }
+
   return (
     <ul className={props.className} style={props.style}>
-      <li>item 1</li>
-      <li>item 2</li>
-      <li>item 3</li>
-      <li>item 4</li>
+      {itemList.map((item) => (
+        <li key={item.id}>item {item.num}</li>
+      ))}
     </ul>
   );
 };
