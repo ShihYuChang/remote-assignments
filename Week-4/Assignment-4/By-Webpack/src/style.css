@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.mainContent {
+  width: 70%;
+  margin: 2em auto;
+}
+
+.contentBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.box-row {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  border: 1px solid #d0d7de;
+  border-bottom: 0;
+}
+
+.box-row li {
+  border-bottom: 1px solid #d0d7de;
+  padding: 16px;
+}
+
+/* Topics */
+.topic {
+  margin: 4px 0;
+}
+
+.topicTag {
+  display: inline-block;
+  padding: 0 10px;
+  margin: 4px 1.5px 4px 0;
+  line-height: 22px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #0969da;
+  background: #ddf4ff;
+  border: 1px solid transparent;
+  border-radius: 2em;
+}
+
+/* The 'More' Button */
+
+.showMoreBtn {
+  border: 0;
+  background-color: white;
+  color: #0969da;
+  font-weight: 500;
+  font-size: 18px;
+  margin: 1.5em 0;
+  cursor: pointer;
+  justify-content: flex-start;
+}
+
+/* Media Query */
+@media screen and (min-width: 768px) {
+  .title {
+    color: #0969da;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline;
+  }
+
+  .box-row li p {
+    font-size: 14px;
+    color: #57606a;
+    margin-top: 5px;
+  }
+
+  .box-row li span {
+    display: inline-block;
+    margin-left: 4px;
+    border: 1px solid #d0d7de;
+    border-radius: 2em;
+    font-size: 12px;
+    font-weight: 500;
+    color: #57606a;
+    padding: 3px 7px;
+  }
+}
