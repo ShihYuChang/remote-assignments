@@ -8,7 +8,7 @@ import "./normalize.css";
 const App = () => (
   <div className="wrapper">
     <div className="mainContent">
-      <ContentTable />
+      <ContentTable boxNum={5} />
     </div>
   </div>
 );
