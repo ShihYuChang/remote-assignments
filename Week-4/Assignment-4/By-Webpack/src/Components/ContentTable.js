@@ -2,11 +2,13 @@ import React, { useState, useEffect } from "react";
 
 const ContentTable = (props) => {
   const [data, setData] = useState([]);
-  const [boxNum, setBoxNum] = useState(props.boxNum);
+  const [numPerPage, setNumPerPage] = useState(5);
 
   useEffect(() => {
     console.log("useEffect called!");
-    fetch("https://api.github.com/orgs/facebook/repos")
+    fetch(
+      `https://api.github.com/orgs/facebook/repos?per_page=${numPerPage}&page=1`
+    )
       .then((res) => res.json())
       .then((data) =>
         setData(
@@ -20,11 +22,11 @@ const ContentTable = (props) => {
         )
       )
       .catch((err) => console.log("Erro fetching and parsing", err));
-  }, []);
+  }, [numPerPage]);
   return (
     <div className="contentBox">
       <ul className="box-row">
-        {data.slice(0, boxNum).map((item, index) => (
+        {data.map((item, index) => (
           <li id={`box${index}`} key={index}>
             <a href={item.href} className="title">
               {item.title}
@@ -49,7 +51,7 @@ const ContentTable = (props) => {
         className="showMoreBtn"
         type="button"
         onClick={() => {
-          setBoxNum(boxNum + 5);
+          setNumPerPage(numPerPage + 5);
         }}
       >
         More
