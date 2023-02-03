@@ -20,7 +20,7 @@ const ContentTable = (props) => {
         )
       )
       .catch((err) => console.log("Erro fetching and parsing", err));
-  }, [numPerPage]);
+  }, [page]);
   return (
     <div className="contentBox">
       <ul className="box-row">
