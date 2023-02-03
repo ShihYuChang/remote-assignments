@@ -2,13 +2,11 @@ import React, { useState, useEffect } from "react";
 
 const ContentTable = (props) => {
   const [data, setData] = useState([]);
-  const [numPerPage, setNumPerPage] = useState(5);
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     console.log("useEffect called!");
-    fetch(
-      `https://api.github.com/orgs/facebook/repos?per_page=${numPerPage}&page=1`
-    )
+    fetch(`https://api.github.com/orgs/facebook/repos?per_page=5&page=${page}`)
       .then((res) => res.json())
       .then((data) =>
         setData(
@@ -51,7 +49,7 @@ const ContentTable = (props) => {
         className="showMoreBtn"
         type="button"
         onClick={() => {
-          setNumPerPage(numPerPage + 5);
+          setPage(page + 5);
         }}
       >
         More
