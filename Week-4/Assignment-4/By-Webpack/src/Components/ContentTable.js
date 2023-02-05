@@ -8,19 +8,21 @@ const ContentTable = (props) => {
     console.log("useEffect called!");
     fetch(`https://api.github.com/orgs/facebook/repos?per_page=5&page=${page}`)
       .then((res) => res.json())
-      .then((data) =>
-        setData(
-          data.map((item) => ({
+      .then((newData) =>
+        setData([
+          ...data,
+          ...newData.map((item) => ({
             title: item.name,
             description: item.description,
             visibility: item.visibility,
             href: item.html_url,
             topics: item.topics,
-          }))
-        )
+          })),
+        ])
       )
-      .catch((err) => console.log("Erro fetching and parsing", err));
+      .catch((err) => console.log("Error fetching and parsing", err));
   }, [page]);
+
   return (
     <div className="contentBox">
       <ul className="box-row">
